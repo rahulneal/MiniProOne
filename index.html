@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MiniAppsONE</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 20vw;
+            padding: 20rem;
+            background-color: #DBDBDB;
+            
+        }
+        .btn{
+            background-color: #636363;
+            margin-top: 1rem;
+            padding: 1rem;
+            color: white;
+            font-size: xx-large;
+            border-radius: .5rem;
+            
+            
+        }
+        .in{
+            padding: 2rem;
+            margin-bottom: 1rem;
+            background-color: #85C7F2;
+            border: white;
+            border-radius: .5rem;
+            color: white;
+            font-size: xx-large;
+
+        }
+
+        .mini{
+            color: #4C4C4C ;
+            text-align: center;
+            font-size: xx-large;     
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <h1 class="mini" > MINI APP </h1>
+    <input class="in" type="number" id="inputOne">
+    <input  class="in" type="number" id="inputTwo">
+
+    <button class="btn" id="btnAdd">+</button>
+    <button class="btn" id="btnMinus">-</button>
+    <button class="btn" id="btnMul">*</button>
+    <button class="btn" id="btnDivd">/</button>
+    <h3  class="mini" id="heading"></h3>
+
+    <p> Developed with 💛 By Rahul </p>
+    <script>
+        const headingEl = document.querySelector("#heading")
+
+        let sum = 0;
+
+        function add(){
+            const inputElOne = document.querySelector("#inputOne");
+            const textOne = inputElOne.value;
+            const inputElTwo = document.querySelector("#inputTwo");
+            const textTwo = inputElTwo.value;
+
+            const digiOne = parseInt(textOne, 10)
+            const digiTwo = parseInt(textTwo, 10)
+            sum = digiOne + digiTwo
+
+            headingEl.textContent=sum
+        }
+        function minus(){
+            const inputElOne = document.querySelector("#inputOne");
+            const textOne = inputElOne.value;
+            const inputElTwo = document.querySelector("#inputTwo");
+            const textTwo = inputElTwo.value;
+
+            const digiOne = parseInt(textOne, 10)
+            const digiTwo = parseInt(textTwo, 10)
+            sum = digiOne - digiTwo
+
+            headingEl.textContent=sum
+        }
+        function mul(){
+            const inputElOne = document.querySelector("#inputOne");
+            const textOne = inputElOne.value;
+            const inputElTwo = document.querySelector("#inputTwo");
+            const textTwo = inputElTwo.value;
+
+            const digiOne = parseInt(textOne, 10)
+            const digiTwo = parseInt(textTwo, 10)
+            sum = digiOne * digiTwo
+
+            headingEl.textContent=sum
+        }
+        function divd(){
+            const inputElOne = document.querySelector("#inputOne");
+            const textOne = inputElOne.value;
+            const inputElTwo = document.querySelector("#inputTwo");
+            const textTwo = inputElTwo.value;
+
+            const digiOne = parseInt(textOne, 10)
+            const digiTwo = parseInt(textTwo, 10)
+            sum = digiOne / digiTwo
+
+            headingEl.textContent=sum
+        }
+        //plus
+        const elementplus = document.querySelector("#btnAdd")
+
+        elementplus.addEventListener("click",add,false);
+        //minus
+        const elementminus = document.querySelector("#btnMinus")
+
+        elementminus.addEventListener("click",minus,false)
+
+        //mul
+        const elementmul = document.querySelector("#btnMul")
+
+        elementmul.addEventListener("click",mul,false)
+        //divd
+        const elementdivd = document.querySelector("#btnDivd")
+
+        elementdivd.addEventListener("click",divd,false)
+
+    </script>
+</body>
+</html>
